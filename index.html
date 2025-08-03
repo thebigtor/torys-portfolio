@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hi, I'm Tory!</title>
+</head>
+<body>
+    <section id="menu-bar">
+        <nav>
+            <ul class="menu-bar">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#butt">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="header">
+        <div class="header-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm Tory! This is my personal portfolio website.</p>
+            <p>Feel free to explore my projects, and I encourage you to get in touch!</p>
+        </div>
+    </section>
+    <br>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="about_toss.JPG" alt="Me Throwing at Iowa State" class="about-image">
+        <hr>
+        <p>My technical background includes extensive Python, HTML, as well as CSS, and I’m currently expanding my skills with 
+            JavaScript and various other frameworks. I enjoy exploring new technologies to broaden my expertise and 
+            stay up to date with the latest trends. I’m pursuing a Computer Science degree at the University of 
+            Northern Iowa while competing as a thrower on the Track and Field team. My dedication allows me to 
+            excel in both academic and athletic pursuits. Feel free to reach out with any questions or 
+            collaboration ideas — and be sure to check out my projects below!</p>
+    </section>
+    <br>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3><i>myPass, Password Manager App</i></h3>
+            <img class="project-image" src="mp_menu.png" alt="myPass Main Menu Screenshot">
+            <p><i>As my most recent Python project to date, I developed a password manager application that stores and manages user passwords. You can add and remove passwords and
+                services to customize your expericence directly to you. I built this using Python and the Tkinter library for the GUI.</i>
+            </p>
+        </div>
+        <div class="project">
+            <h3>The Well, Local Hangout Website</h3>
+            <img class="project-image-big" src="twv_home.png" alt="The Well Main Screenshot">
+            <p><i>The Well is a local hangout website I developed using HTML, CSS, 
+                and was my first website. It features a user-friendly interface and allows users 
+                to find and share local events and activities. I feel this project shows how
+                even when starting from scratch, I can create something valuable and engaging. you 
+                can visit this site at <a class="project-link" href="http://thewellvinton.com" target="_blank" rel="noopener noreferrer">thewellvinton.com</a>, to see
+                my work in action for yourself!</i>
+            </p>
+        </div>
+        <div class="project">
+            <h3>This Page!</h3>
+            <img class="project-image" src="my_code.png" alt="Sneaky Screenshot of myPass Code!">
+            <p><i>Yes, this page is another one of my projects. Although basic, it demonstrates my ability to create a cohesive layout 
+                and design with a purpose, skipping all the mumbo-jumbo. This pages purpose is to tell you about me and my journey 
+                as not only a web-developer, but as a student, an athlete, and a person!</i></p>
+        </div>
+    </section>
+    <br>
+    <section id="butt">
+        <h2>Get in Touch</h2>
+        <p><i>Any inquiries you have for me, whether it be about canidate status, project collaborations, or just to say hi, feel 
+            free to reach out!</i></p>
+        <hr>
+        <form class="gform" action="https://script.google.com/macros/s/AKfycbwmd5z_LAUQa4UWqst1kNISOc8-UBTh94Q0QNSr-fdOrjwzOALrG-SBq7W5kyrJGwLh/exec" 
+        method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <div id="notification" class="notification">
+        <p>Thank you! Your message has been submitted.</p>
+    </div>
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+</body>
+</html>
