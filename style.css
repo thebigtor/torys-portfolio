@@ -291,6 +291,7 @@ ul {
 }
 
 li {
+    font-size: 100%;
     display: inline;
     margin: 0 10px;
 }
