@@ -425,4 +425,5 @@ input:focus, textarea:focus, select:focus {
     color: white;
     transition: 0.3s ease;
     font-size: 1rem; /* Base font size */
+    white-space: nowrap; /* Prevents text wrapping */
 }
