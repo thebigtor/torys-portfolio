@@ -391,14 +391,19 @@ input:focus, textarea:focus, select:focus {
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    transition: top 0.5s ease;
+    transition: top 0.5s ease, opacity 0.5s ease; /* Add transition for both properties */
     border-left: 4px solid var(--primary);
-    opacity: 0; /* Start invisible */
-    pointer-events: none; /* Prevent interaction when hidden */
+    opacity: 0;
+    pointer-events: none;
 }
 
 .notification.show {
     top: 20px;
     opacity: 1;
     pointer-events: auto;
+}
+
+.notification.sliding-up {
+    top: -100px;
+    opacity: 0;
 }
