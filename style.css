@@ -424,17 +424,5 @@ input:focus, textarea:focus, select:focus {
     background-color: var(--dark);
     color: white;
     transition: 0.3s ease;
-    font-size: 1rem; /* Base font size */
-}
-
-@media (max-width: 768px) {
-    #menu-bar nav ul li a {
-        font-size: 0.9rem; /* Slightly smaller font size on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    #menu-bar nav ul li a {
-        font-size: 0.8rem; /* Even smaller font size on very small screens */
-    }
+    font-size: 2dvw; /* Base font size */
 }
