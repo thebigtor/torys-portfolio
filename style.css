@@ -325,6 +325,7 @@ nav {
 .menu-bar {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -424,5 +425,5 @@ input:focus, textarea:focus, select:focus {
     background-color: var(--dark);
     color: white;
     transition: 0.3s ease;
-    font-size: 2dvw; /* Base font size */
+    font-size: 100%; /* Base font size */
 }
