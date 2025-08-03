@@ -474,32 +474,3 @@ input:focus, textarea:focus, select:focus {
         padding-inline: 3%; /* Reduce side padding on very small screens */
     }
 }
-
-/* Enhanced mobile styles to force horizontal layout */
-@media (max-width: 500px) {
-    /* Force horizontal layout */
-    nav, .menu-bar, ul {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        width: 100% !important;
-        justify-content: center !important;
-    }
-    
-    #menu-bar nav ul li {
-        display: inline-block !important;
-        width: auto !important;
-        margin: 2px !important;
-    }
-    
-    #menu-bar nav ul li a {
-        padding: 6px 8px !important;
-        font-size: 0.75rem !important; /* Even smaller font */
-        display: block !important;
-    }
-    
-    /* Adjust header margin on mobile */
-    #header {
-        margin-top: 50px !important; /* Ensure content isn't hidden under nav */
-    }
-}
