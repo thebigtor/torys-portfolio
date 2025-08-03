@@ -82,15 +82,10 @@
             form.reset();
             
             // Update notification after successful submission
-            notification.querySelector('p').textContent = "Thank you! Your message has been submitted.";
-            
-            // Hide notification after 3 seconds
-            setTimeout(function() {
-              notification.classList.remove('show');
-            }, 3000);
+            showNotification("Thank you! Your message has been submitted.");
           } else {
             // Handle error
-            notification.querySelector('p').textContent = "Something went wrong. Please try again.";
+            showNotification("Something went wrong. Please try again.", true);
           }
           
           // Reset button state
@@ -121,4 +116,40 @@
       buttons[i].disabled = true;
     }
   }
+
+  function showNotification(message, isError = false) {
+    const notification = document.getElementById('notification');
+    const notificationText = notification.querySelector('p');
+    
+    // Set the message
+    notificationText.textContent = message;
+    
+    // Style based on error status
+    if (isError) {
+        notification.style.borderLeftColor = '#ff3a3a'; // Red for errors
+    } else {
+        notification.style.borderLeftColor = '#3a86ff'; // Blue for success
+    }
+    
+    // Reset any previous animation
+    notification.classList.remove('sliding-up');
+    
+    // Force browser to recognize the element's current position before animating
+    void notification.offsetWidth; // This triggers a reflow
+    
+    // Add the show class to trigger the slide-in animation
+    notification.classList.add('show');
+    
+    // Hide notification after delay
+    setTimeout(function() {
+        // Slide up animation
+        notification.classList.add('sliding-up');
+        
+        // After animation completes, reset everything
+        setTimeout(function() {
+            notification.classList.remove('show');
+            notification.classList.remove('sliding-up');
+        }, 500); // Match this to your CSS transition time
+    }, 3000);
+}
 })();
