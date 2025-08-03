@@ -451,21 +451,26 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (max-width: 500px) {
-    /* Stack vertically on very small screens */
+    /* Keep horizontal layout but make adjustments for small screens */
     .menu-bar {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Keep horizontal layout */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: center;
     }
     
     #menu-bar nav ul li {
-        display: block;
-        margin: 5px 0;
-        width: 80%;
+        display: inline-block;
+        margin: 3px;
+        width: auto; /* Don't force width */
     }
     
     #menu-bar nav ul li a {
-        display: block;
-        text-align: center;
-        padding: 8px;
+        padding: 5px 8px;
+        font-size: 0.8rem; /* Smaller font */
+        white-space: nowrap; /* Prevent text wrapping within buttons */
+    }
+    
+    html {
+        padding-inline: 3%; /* Reduce side padding on very small screens */
     }
 }
