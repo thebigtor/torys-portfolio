@@ -186,13 +186,7 @@ section#menu-bar {
 }
 
 /* Fade in from top animation for header */
-.header-content h1 {
-    opacity: 0;
-    transform: translateY(-40px);
-    animation: fadeInTop 2s ease-out forwards;
-}
-
-.header-content p {
+.fade-in-top {
     opacity: 0;
     transform: translateY(-40px);
     animation: fadeInTop 2s ease-out forwards;
