@@ -25,7 +25,9 @@ body {
     background-color: var(--background);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--light);
 }
 
@@ -36,7 +38,8 @@ section {
     margin-bottom: 20px;
 }
 
-#about, #butt {
+#about,
+#butt {
     background: var(--darker);
 }
 
@@ -47,14 +50,16 @@ section {
 }
 
 /* Form elements */
-input, textarea {
+input,
+textarea {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--dark);
     color: var(--text);
     border: 1px solid var(--border-color);
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.3);
 }
@@ -91,7 +96,8 @@ input:focus, textarea:focus {
 
 html {
     scroll-behavior: smooth;
-    padding-inline: 10%; /* Remove the 10% padding that's causing layout issues */
+    padding-inline: 10%;
+    /* Remove the 10% padding that's causing layout issues */
     padding-bottom: 3%;
     background-color: var(--background);
 }
@@ -104,14 +110,16 @@ p {
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; /* More modern font */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    /* More modern font */
     line-height: 1.8;
     background-color: var(--background);
     margin: 0;
     padding: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: var(--text);
     justify-content: center;
     display: flex;
@@ -126,11 +134,13 @@ h1 {
 a {
     text-decoration: none;
     color: system-ui;
-    transition: transform 0.3s; /* Shortened the transition time for a snappier effect */
+    transition: transform 0.3s;
+    /* Shortened the transition time for a snappier effect */
 }
 
 a:hover {
-    transform: translate(0, -2px); /* Negative value makes it move upward */
+    transform: translate(0, -2px);
+    /* Negative value makes it move upward */
 }
 
 section#menu-bar {
@@ -144,8 +154,10 @@ section#menu-bar {
 #header {
     background-image: url('headshot.jpg');
     background-size: cover;
-    background-position: center top 15%; /* Center horizontally, 30px below the top edge */
-    height: 70vh; /* Adjust this value as needed */
+    background-position: center top 15%;
+    /* Center horizontally, 30px below the top edge */
+    height: 70vh;
+    /* Adjust this value as needed */
     position: relative;
     display: flex;
     align-items: center;
@@ -162,22 +174,47 @@ section#menu-bar {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.692); /* Dark overlay for better text readability */
+    background: rgba(0, 0, 0, 0.692);
+    /* Dark overlay for better text readability */
 }
 
 .header-content {
     position: relative;
-    z-index: 2; /* Places text above the overlay */
+    z-index: 2;
+    /* Places text above the overlay */
     padding: 20px;
 }
 
-#header h1, #header p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Makes text more readable */
+/* Fade in from top animation for header */
+.header-content h1 {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInTop 2s ease-out forwards;
+}
+
+.header-content p {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInTop 2s ease-out forwards;
+}
+
+@keyframes fadeInTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#header h1,
+#header p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Makes text more readable */
 }
 
 /* Section styling */
 section {
-    padding: 80px 15% 60px; /* Consistent padding with more breathing room */
+    padding: 80px 15% 60px;
+    /* Consistent padding with more breathing room */
     margin-bottom: 0;
 }
 
@@ -256,19 +293,23 @@ form {
     padding: 0 15px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 5px;
-    box-sizing: border-box; /* This is crucial - includes padding in width calculation */
+    box-sizing: border-box;
+    /* This is crucial - includes padding in width calculation */
     border-radius: 6px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     font-size: 16px;
-    resize: none; /* Prevents resizing of textarea */
+    resize: none;
+    /* Prevents resizing of textarea */
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
 }
@@ -306,14 +347,17 @@ li {
 /* Navigation Bar Styles */
 #menu-bar {
     position: fixed;
-    top: 0;         /* Anchor to top of screen */
-    left: 0;        /* Anchor to left edge */
+    top: 0;
+    /* Anchor to top of screen */
+    left: 0;
+    /* Anchor to left edge */
     width: 100%;
     z-index: 1000;
     background-color: var(--darker);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
-    margin: 0;      /* Remove any margin */
+    margin: 0;
+    /* Remove any margin */
 }
 
 nav {
@@ -337,7 +381,8 @@ nav {
     background-color: var(--dark);
     color: white;
     transition: 0.3s ease;
-    font-size: 1rem; /* Base font size */
+    font-size: 1rem;
+    /* Base font size */
 }
 
 #menu-bar nav ul li a:hover {
@@ -345,17 +390,23 @@ nav {
     transition: 0.3s ease;
 }
 
-input, textarea {
+input,
+textarea {
     border-radius: 5px;
 }
 
-textarea, select {
-    border-color: var(--border-color); 
+textarea,
+select {
+    border-color: var(--border-color);
 }
 
-input:focus, textarea:focus, select:focus {
-    border-color: #0056b3; /* Darker blue when focused */
-    outline: none; /* Removes the default browser outline */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #0056b3;
+    /* Darker blue when focused */
+    outline: none;
+    /* Removes the default browser outline */
 }
 
 .form-group {
@@ -369,19 +420,23 @@ input:focus, textarea:focus, select:focus {
 
 /* Placeholder styling */
 ::placeholder {
-    color: rgba(180, 180, 180, 0.7); /* Translucent gray */
+    color: rgba(180, 180, 180, 0.7);
+    /* Translucent gray */
     opacity: 0.7;
     font-style: italic;
     transition: opacity 0.3s;
 }
 
 /* Different browsers require different selectors */
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: rgba(180, 180, 180, 0.7);
     opacity: 0.7;
     font-style: italic;
 }
-::-moz-placeholder { /* Firefox */
+
+::-moz-placeholder {
+    /* Firefox */
     color: rgba(180, 180, 180, 0.7);
     opacity: 0.7;
     font-style: italic;
@@ -389,7 +444,8 @@ input:focus, textarea:focus, select:focus {
 
 .notification {
     position: fixed;
-    top: -100px; /* Start off-screen */
+    top: -100px;
+    /* Start off-screen */
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--darkest);
@@ -398,7 +454,8 @@ input:focus, textarea:focus, select:focus {
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    transition: top 0.5s ease, opacity 0.5s ease; /* Add transition for both properties */
+    transition: top 0.5s ease, opacity 0.5s ease;
+    /* Add transition for both properties */
     border-left: 4px solid var(--primary);
     opacity: 0;
     pointer-events: none;
@@ -415,6 +472,13 @@ input:focus, textarea:focus, select:focus {
     opacity: 0;
 }
 
+/* Add this class for animation */
+.fade-in-top {
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeInTop 5s ease-out forwards;
+}
+
 /* Add these responsive styles to your existing CSS */
 
 /* Make the menu text size responsive */
@@ -425,5 +489,6 @@ input:focus, textarea:focus, select:focus {
     background-color: var(--dark);
     color: white;
     transition: 0.3s ease;
-    font-size: 100%; /* Base font size */
+    font-size: 100%;
+    /* Base font size */
 }
